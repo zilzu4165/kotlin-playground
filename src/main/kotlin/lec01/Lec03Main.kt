@@ -8,16 +8,10 @@ class Lec03Main {
  */
 
 fun main() {
-
+    printAgeIfPerson(Person("",100))
 }
 
-fun printAgeIfPerson(obj: Any) {
-    if (obj is Person) { // instanceof
-        val person = obj as Person  // (Person) obj
-        println(person.age)
-    }
-
-    if (obj is Person) {
-        println(obj.age) // if 문 안에서 타입체크를 해줬으므로 형변환 안해줘도 되는 것 :: 스마트캐스트
-    }
+fun printAgeIfPerson(obj: Any?) {
+    val person = obj as? Person
+    println(person?.age)
 }
