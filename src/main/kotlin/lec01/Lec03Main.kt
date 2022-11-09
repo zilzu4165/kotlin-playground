@@ -8,14 +8,16 @@ class Lec03Main {
  */
 
 fun main() {
-    // 코틀린에서는 선언된 기본값을 보고 타입을 추론한다.
-    val number1 = 3 // Int
-    val number2 = 3L // Long
-    val number3 = 3.0f // Float
-    val number4 = 3.0 // Double
 
-    val number5: Long = number1.toLong()  // 코틀린에서는 암시적 타입변경이 불가능하기때문에 toLong()
+}
 
-    println(number1 + number2)
+fun printAgeIfPerson(obj: Any) {
+    if (obj is Person) { // instanceof
+        val person = obj as Person  // (Person) obj
+        println(person.age)
+    }
 
+    if (obj is Person) {
+        println(obj.age) // if 문 안에서 타입체크를 해줬으므로 형변환 안해줘도 되는 것 :: 스마트캐스트
+    }
 }
