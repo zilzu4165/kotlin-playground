@@ -8,12 +8,7 @@ class Lec03Main {
  */
 
 fun main() {
-    val name = "박성수"
+    val str = "ABCDE"
 
-    val str = """
-        ABC
-        EFG
-        ${name}
-    """.trimIndent()
-    println(str)
+    println(str[1])  // B
 }
