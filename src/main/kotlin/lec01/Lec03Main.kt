@@ -8,10 +8,14 @@ class Lec03Main {
  */
 
 fun main() {
-    printAgeIfPerson(Person("",100))
-}
+    val person = Person("박성수", 100)
+    val age = 29
+    val height = 178
 
-fun printAgeIfPerson(obj: Any?) {
-    val person = obj as? Person
-    println(person?.age)
+    println("이름 : ${person.name}, 나이 : $age, 키 : ${height}")
+//     변수 이름만 사용하더라도 ${변수}를 사용하는 것이
+//     1) 가독성
+//     2) 일괄 변환
+//     3) 정규식 활용
+//     측면에서 좋다.
 }
