@@ -9,6 +9,10 @@ public class JavaMoney implements Comparable<JavaMoney>{
         this.amount = amount;
     }
 
+    public JavaMoney plus(JavaMoney other) {
+        return new JavaMoney(this.amount + other.amount);
+    }
+
     @Override
     public int compareTo(@NotNull JavaMoney o) {
         return Long.compare(this.amount, o.amount);
@@ -29,5 +33,12 @@ public class JavaMoney implements Comparable<JavaMoney>{
     @Override
     public int hashCode() {
         return (int) (amount ^ (amount >>> 32));
+    }
+
+    @Override
+    public String toString() {
+        return "JavaMoney{" +
+                "amount=" + amount +
+                '}';
     }
 }
