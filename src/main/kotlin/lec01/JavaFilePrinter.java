@@ -14,4 +14,9 @@ public class JavaFilePrinter {
         System.out.println(reader.readLine());
         reader.close();
     }
+    public void readFile(String path) throws IOException {
+        try (BufferedReader reader = new BufferedReader(new FileReader(path))) {
+            System.out.println(reader.readLine());
+        }
+    }
 }

@@ -12,4 +12,9 @@ class FilePrinter {
         println(reader.readLine())
         reader.close()
     }
+    fun readFile(path: String) {
+        BufferedReader(FileReader(path)).use { reader ->
+            println(reader.readLine())
+        }
+    }
 }
