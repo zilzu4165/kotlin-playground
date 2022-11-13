@@ -4,7 +4,7 @@ class Lec08Main {
 }
 
 fun main() {
-    repeat("Hello World")
+    repeat("Hello World", useNewLine = false) // named argument 매개변수 이름을 통해 직접 지정
 }
 
 fun max(a: Int, b: Int) = if (a > b) a else b
