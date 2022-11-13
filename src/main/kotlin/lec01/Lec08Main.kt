@@ -4,21 +4,15 @@ class Lec08Main {
 }
 
 fun main() {
-    repeat("Hello World", useNewLine = false) // named argument 매개변수 이름을 통해 직접 지정
+    printAll("a", "b", "c")
+
+    val array = arrayOf("A", "B", "C")
+    printAll(*array)  // 배열 앞에 * 는 스프레드 연산자로 , 의 역할을 해준다.
+
 }
 
-fun max(a: Int, b: Int) = if (a > b) a else b
-
-fun repeat(  // default parameter 밖에서 파라미터를 넣어주지 않으면 기본값을 사용한다.
-    str: String,
-    num: Int = 3,
-    useNewLine: Boolean = true
-) {
-    for (i in 1..num) {
-        if (useNewLine) {
-            println(str)
-        }else {
-            print(str)
-        }
+fun printAll(vararg strings: String) {  // varage 가변인자
+    for (str in strings) {
+        println(str)
     }
 }
