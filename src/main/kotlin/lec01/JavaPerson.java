@@ -12,6 +12,10 @@ public class JavaPerson {
         this.age = age;
     }
 
+    public JavaPerson(String name) {
+        this(name, 1);
+    }
+
     public String getName() {
         return name;
     }

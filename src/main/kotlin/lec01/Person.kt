@@ -16,4 +16,5 @@ class Person(
             throw IllegalArgumentException("나이는 ${age}일 수 없습니다.")
         }
     }
+    constructor(name: String) : this(name, 1)
 }
