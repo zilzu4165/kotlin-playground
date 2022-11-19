@@ -1,7 +1,8 @@
 package lec01
 
 fun main() {
-    val person = Person("박성수", 20)
+    val person = Person("zilzu", 20)
+    println(person.uppercaseName)
     println(person.isAdult)
 
 }
@@ -10,7 +11,8 @@ class Person(  // --> 주 생성자(primary constructor) : 반드시 존재해�
     val name: String,
     var age: Int
 ) {
-
+    val uppercaseName: String
+        get() = this.name.uppercase()
 
     init {
         if (age <= 0) {
