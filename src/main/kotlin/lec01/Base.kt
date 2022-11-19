@@ -18,5 +18,5 @@ class Derived(
 }
 
 fun main() {
-    println(Derived(100).number)
+    Derived(300)
 }
