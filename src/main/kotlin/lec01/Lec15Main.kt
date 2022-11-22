@@ -4,11 +4,8 @@ class Lec15Main {
 }
 
 fun main() {
-    val array = arrayOf(100, 200, 300)
-    val plusArray = array.plus(300)
-    array.plus(400)
-    array.plus(500)
-    for ((idx, value) in plusArray.withIndex()) {
-        println("${idx} ${value}")
-    }
+    val numbers = listOf(100, 200)
+    val emptyList = emptyList<Int>() // 비어있는 리스트는 추론을 못하기 때문에 무슨타입인지 넣어주어야함
+
+
 }
