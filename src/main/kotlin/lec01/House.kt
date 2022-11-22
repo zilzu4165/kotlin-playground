@@ -2,9 +2,12 @@ package lec01
 
 class House(
     var address: String,
-    var livingRoom: LivingRoom = LivingRoom(10.0)
+    var livingRoom: LivingRoom
 ) {
-    class LivingRoom(
+    inner class LivingRoom(
         private var area: Double
-    )
+    ){
+        val address: String
+            get() = this@House.address
+    }
 }
