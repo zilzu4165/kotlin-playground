@@ -1,9 +1,9 @@
 package lec01
 
 fun main() {
-//Person.Companion.newBaby("박성수")
-    Person.newBaby("박성수")
-    Person.Factory.newBaby("박성수")
+    println(Singleton.a)
+    Singleton.a += 10
+    println(Singleton.a)
 }
 
 class Person private constructor(
@@ -23,4 +23,8 @@ class Person private constructor(
             println("나는 Person클래스의 동행 객체다.")
         }
     }
+}
+
+object Singleton {
+    var a: Int = 0
 }
