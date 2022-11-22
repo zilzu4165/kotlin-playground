@@ -4,11 +4,9 @@ class Lec15Main {
 }
 
 fun main() {
-//    val numbers = listOf(100, 200) // 가변
-    val numbers = mutableListOf(100, 200) // 불변
+    val numbers = setOf(100, 200) // 가변
+//    val numbers = mutableSetOf<>() Of(100, 200) // 불변
 
-
-    println(numbers[0])
 
     for (number in numbers) {
         println(number)
