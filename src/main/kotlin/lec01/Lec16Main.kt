@@ -9,7 +9,15 @@ fun Person.nextYearAge(): Int {  // 확장함수와 멤버함수의 시그니처
 }
 
 fun main() {
-    val person = Person("A", "B", 100)
-    println(person.nextYearAge())
+    3.add(4)
+    3.add2(4)
+    3 add2 4  // infix 함수
+}
 
+fun Int.add(other: Int): Int {
+    return this + other
+}
+
+infix fun Int.add2(other: Int): Int {
+    return this + other
 }
